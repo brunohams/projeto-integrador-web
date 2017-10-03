@@ -1,0 +1,39 @@
+*
+{
+
+    color: #2d2d2d;
+    
+}
+
+.page-header
+{
+    margin-top: 1rem;
+    background-color: white;
+}
+
+.corpo
+{
+    background: #00a6e0;
+    padding-bottom: 2rem;
+}
+
+.apresentacao
+{
+    font-size: 1.8em;
+}
+
+.container
+{
+    background-color: white;
+    border: 1px solid #2d2d2d;
+    padding: 1rem;
+    width: 80%;
+}
+
+@media (max-width: 600px)
+{
+    .container
+    {
+        width: 80%;
+    }
+}
