@@ -3,6 +3,8 @@
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>
 
-    <script src="js/gerador.js"></script>
+    <script src="js/geral.js"></script>
+
+    @yield('javascript')
 
 </html>

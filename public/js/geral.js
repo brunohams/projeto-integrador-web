@@ -2,9 +2,20 @@ $(function ()
 {
 
     /**
+     * Campos para mascarar
+     */
+    var data    = $('.date');
+    var cep     = $('.cep');
+    var fone    = $('.telefone');
+    var cpf     = $('.cpf');
+
+    /**
      * Máscaras
      */
-    $('.date').mask('00/00/0000');
+    data.mask('00/00/0000');
+    cep.mask('00000-000');
+    fone.mask('00000-0000');
+    cpf.mask('000.000.000-00');
 
     /** PT-BR para datepicker **/
     jQuery(function($){
@@ -32,7 +43,7 @@ $(function ()
     /**
      * Inicializa datepicker
      */
-    $('#ano').datepicker({
+    data.datepicker({
         locale: 'pt-BR'
     });
 
@@ -104,43 +115,20 @@ $(function ()
 
 });
 
-
 /**
- * Adiciona um novo campo de autor
+ * Funcao ajax
  */
-function adicionaAutor()
+function ajax(prUrl, prData, prFunction)
 {
 
-    var autor = $('#div-autor');
-
-    /** Permite no máximo 3 autores */
-    if ($('[data-class="autor"]').length < 3)
-    {
-
-        /** Copia a div de autor */
-        autor.after('<div class="col-xs-12 col-md-12 col-lg-12">'+autor.html()+'</div>');
-
-        /** Varre as divs e seta os valores */
-        $('[data-class="autor"]').each(function (index, item)
+    $.ajax
+    ({
+        url     : prUrl,
+        data    : prData,
+        success : function (retorno)
         {
-
-            var numeracao = (index + 1);
-
-            $(item).find('input').prop('id', 'autor'+numeracao);
-            $(item).find('input').prop('placeholder', 'Nome do autor '+numeracao);
-
-            $(item).find('label').html('Autor '+numeracao);
-
-        });
-
-    }
-    else
-    {
-
-        alert('Máximo de autores já adicionados!');
-
-    }
-
+            return prFunction(retorno);
+        }
+    });
 
 }
-
