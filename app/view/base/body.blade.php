@@ -7,7 +7,6 @@
         <div class="page-header">
 
             Projeto Integrador
-            <img class="img-responsive center-block logo" src="imagens/logo.png" alt="logo"/>
 
         </div>
 

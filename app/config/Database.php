@@ -14,9 +14,9 @@
         /** Local connection */
         'local' => array (
             'mysql' => array (
-                'database'  => '',
-                'username'  => '',
-                'password'  => ''
+                'database'  => 'integrador',
+                'username'  => 'root',
+                'password'  => 'root'
             )
         ),
 

@@ -102,4 +102,15 @@
 
         }
 
+        /**
+         * Lista de fase escolares
+         * @return array
+         */
+        public final function situacaoCurso ()
+        {
+
+            $this->faseEscolar();
+
+        }
+
 	}
