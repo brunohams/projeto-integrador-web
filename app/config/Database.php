@@ -6,7 +6,7 @@
         /** Default options */
         'default' => array (
             'prefix'    => '',
-            'host'      => 'localhost',
+            'host'      => '',
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci'
         ),
@@ -23,9 +23,9 @@
         /** Production connection */
         'production' => array (
             'mysql' => array (
-                'database'  => '',
-                'username'  => '',
-                'password'  => ''
+                'database'  => 'integrador',
+                'username'  => 'integrador',
+                'password'  => 'presunto'
             )
         )
     );

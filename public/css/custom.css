@@ -8,12 +8,13 @@
 .page-header
 {
     margin-top: 1rem;
+    text-align: center;
     background-color: white;
 }
 
 .corpo
 {
-    background: #00a6e0;
+    background: #23527c;
     padding-bottom: 2rem;
 }
 
@@ -36,4 +37,11 @@
     {
         width: 80%;
     }
+}
+
+.btn
+{
+    border-radius: 0;
+    border: 1px #2b542c;
+    font-size: 1.2em;
 }
